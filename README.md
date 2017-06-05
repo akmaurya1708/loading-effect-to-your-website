@@ -13,4 +13,4 @@ Demo: https://akmaurya.in/demo/loader.html
 5. adding jQuery fade out the preloader animation once the page has been completely loaded.
 
 
-Read full deatil here : https://blog.akmaurya.in/adding-loading-effect-to-your-website/
+Read full detail here : https://blog.akmaurya.in/adding-loading-effect-to-your-website/
