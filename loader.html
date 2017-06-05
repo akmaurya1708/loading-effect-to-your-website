@@ -57,42 +57,42 @@
 	<h2>Steps to create loader for your website</h2>
 	<h4>1. Add a loading DIV after the body div starts.</h4>
 	<div class="code">
-		<code>&lt;div class="loading"&gt;</code>
-		<code>&nbsp;&nbsp;&lt;div class="loader"&gt;&lt;/div&gt;</code>
-		<code>&lt;/div&gt;</code>
+		<code>&lt;div class="loading"&gt;<br>
+		&nbsp;&nbsp;&lt;div class="loader"&gt;&lt;/div&gt;<br>
+		&lt;/div&gt;</code>
 	</div>
 	<h4>2. Add some CSS to show the loading div on fullscreen.</h4>
 	<div class="code">
-		<code>.loading{</code>
-			<code>&nbsp;&nbsp;position: fixed;</code>
-			<code>&nbsp;&nbsp;top: 0;</code>
-			<code>&nbsp;&nbsp;bottom: 0;</code>
-			<code>&nbsp;&nbsp;left:0;</code>
-			<code>&nbsp;&nbsp;right: 0;</code>
-			<code>&nbsp;&nbsp;z-index: 999;</code>
-			<code>&nbsp;&nbsp;background-color: #ffffff;</code>
-		<code>}</code>
+		<code>.loading{<br>
+			&nbsp;&nbsp;position: fixed;<br>
+			&nbsp;&nbsp;top: 0;<br>
+			&nbsp;&nbsp;bottom: 0;<br>
+			&nbsp;&nbsp;left:0;<br>
+			&nbsp;&nbsp;right: 0;<br>
+			&nbsp;&nbsp;z-index: 999;<br>
+			&nbsp;&nbsp;background-color: #ffffff;<br>
+		}</code>
 	</div>
 	<h4>3. Add some CSS to show the loading effter to loader div.</h4>
 	<div class="code">
-		<code>.loader {</code>
-			<code>&nbsp;&nbsp;border: 16px solid #f3f3f3;</code>
-			<code>&nbsp;&nbsp;border-top: 16px solid #3498db;</code>
-			<code>&nbsp;&nbsp;border-radius: 50%;</code>
-			<code>&nbsp;&nbsp;width: 120px;</code>
-			<code>&nbsp;&nbsp;height: 120px;</code>
-			<code>&nbsp;&nbsp;animation: spin 2s linear infinite;</code>
-			<code>&nbsp;&nbsp;position: absolute;</code>
-			<code>&nbsp;&nbsp;left: 0;</code>
-			<code>&nbsp;&nbsp;right: 0;</code>
-			<code>&nbsp;&nbsp;top: 0;</code>
-			<code>&nbsp;&nbsp;bottom: 0;</code>
-			<code>&nbsp;&nbsp;margin:auto;</code>
-		<code>}</code>
-		<code>@keyframes spin {</code>
-		    <code>&nbsp;&nbsp;0% { transform: rotate(0deg); }</code>
-		    <code>&nbsp;&nbsp;100% { transform: rotate(360deg); }</code>
-		<code>}</code>
+		<code>.loader {<br>
+			&nbsp;&nbsp;border: 16px solid #f3f3f3;<br>
+			&nbsp;&nbsp;border-top: 16px solid #3498db;<br>
+			&nbsp;&nbsp;border-radius: 50%;<br>
+			&nbsp;&nbsp;width: 120px;<br>
+			&nbsp;&nbsp;height: 120px;<br>
+			&nbsp;&nbsp;animation: spin 2s linear infinite;<br>
+			&nbsp;&nbsp;position: absolute;<br>
+			&nbsp;&nbsp;left: 0;<br>
+			&nbsp;&nbsp;right: 0;<br>
+			&nbsp;&nbsp;top: 0;<br>
+			&nbsp;&nbsp;bottom: 0;<br>
+			&nbsp;&nbsp;margin:auto;<br>
+		}<br>
+		@keyframes spin {<br>v
+		    &nbsp;&nbsp;0% { transform: rotate(0deg); }<br>
+		    &nbsp;&nbsp;100% { transform: rotate(360deg); }<br>
+		}</code>
 	</div>
 	<h4>4. adding jQuery to your webpage at the end of the before closing Body tag</h4>
 	<div class="code">
@@ -100,18 +100,20 @@
 	</div>
 	<h4>5. adding jQuery fade out the preloader animation once the page has been completely loaded.</h4>
 	<div class="code">
-		<code>&lt;script type="text/javascript"&gt;</code>
-		<code>&nbsp;&nbsp;$(window).load(function() {</code>
-		<code>&nbsp;&nbsp;&nbsp;&nbsp;$(".loading").fadeOut("slow");</code>
-		<code>&nbsp;&nbsp;});</code>
-		<code>&lt;/script&gt;</code>
+		<code>&lt;script type="text/javascript"&gt;<br>
+		&nbsp;&nbsp;$(window).load(function() {<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;$(".loading").fadeOut("slow");<br>
+		&nbsp;&nbsp;});<br>
+		&lt;/script&gt;</code>
 	</div>
+
+	<p>Download from: <a class="button" href="https://github.com/akmaurya1708/loading-effect-to-your-website" target="_blank" rel="noopener noreferrer">Download</a></p>
 </div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript">
-	$(window).load(function() {
-		$(".loading").fadeOut("slow");
-	});
+    $(window).load(function() {
+      $(".loading").fadeOut("slow");
+    })
 </script>
 </body>
 </html>
