@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="description" content="Adding Loading effect to Your website in easy way. it will improve your site user experience.">
+  	<meta name="keywords" content="HTML,CSS,XML,adding loading effects, improve your site user experience, loading animation, adding preloaders, jQuery and CSS">
+  	<meta name="author" content="AK Maurya">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Adding Loading effect to Your website in easy way</title>
+	<link rel="stylesheet" type="text/css" href="comman.css">
+	<style type="text/css">
+		.loading{
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left:0;
+			right: 0;
+			z-index: 999;
+			background-color: #ffffff;
+		}
+		.loader {
+		    border: 16px solid #f3f3f3; /* Light grey */
+		    border-top: 16px solid #3498db; /* Blue */
+		    border-radius: 50%;
+		    width: 120px;
+		    height: 120px;
+		    animation: spin 2s linear infinite;
+		    -webkit-animation: spin 2s linear infinite;
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+		    top: 0;
+		    bottom: 0;
+		    margin:auto;
+		}
+		@keyframes spin {
+		    0% { transform: rotate(0deg); }
+		    100% { transform: rotate(360deg); }
+		}
+		@-webkit-keyframes spin {
+		    0% { -webkit-transform: rotate(0deg); }
+		    100% { -webkit-transform: rotate(360deg); }
+		}
+	</style>
+</head>
+<body>
+<div class="loading">
+	<div class="loader"></div>
+</div>
+<div class="content">
+	<div class="logo">
+		<a href="https://akmaurya.in"><img src="https://akmaurya.in/images/akmaurya.png" alt="AK Logo"></a>
+	</div>
+	<h1>Adding Loading effect to Your website in easy way</h1>
+	<p>Its a great idea to show a cool animated image until your website is loading? Of Course, it will improve your site's user experience.</p>
+	<p>Almost all the latest themes on <a href="https://themeforest.net/" target="_blank">Themeforest</a> come with preloaders. Adding preloader will display a loading animation until the page has been completely loaded.</p>
+	<p>In this tutorial, I'll show you the simplest way for adding preloaders to a website using only jQuery and CSS.</p>
+	<h2>Steps to create loader for your website</h2>
+	<h4>1. Add a loading DIV after the body div starts.</h4>
+	<div class="code">
+		<code>&lt;div class="loading"&gt;</code>
+		<code>&nbsp;&nbsp;&lt;div class="loader"&gt;&lt;/div&gt;</code>
+		<code>&lt;/div&gt;</code>
+	</div>
+	<h4>2. Add some CSS to show the loading div on fullscreen.</h4>
+	<div class="code">
+		<code>.loading{</code>
+			<code>&nbsp;&nbsp;position: fixed;</code>
+			<code>&nbsp;&nbsp;top: 0;</code>
+			<code>&nbsp;&nbsp;bottom: 0;</code>
+			<code>&nbsp;&nbsp;left:0;</code>
+			<code>&nbsp;&nbsp;right: 0;</code>
+			<code>&nbsp;&nbsp;z-index: 999;</code>
+			<code>&nbsp;&nbsp;background-color: #ffffff;</code>
+		<code>}</code>
+	</div>
+	<h4>3. Add some CSS to show the loading effter to loader div.</h4>
+	<div class="code">
+		<code>.loader {</code>
+			<code>&nbsp;&nbsp;border: 16px solid #f3f3f3;</code>
+			<code>&nbsp;&nbsp;border-top: 16px solid #3498db;</code>
+			<code>&nbsp;&nbsp;border-radius: 50%;</code>
+			<code>&nbsp;&nbsp;width: 120px;</code>
+			<code>&nbsp;&nbsp;height: 120px;</code>
+			<code>&nbsp;&nbsp;animation: spin 2s linear infinite;</code>
+			<code>&nbsp;&nbsp;position: absolute;</code>
+			<code>&nbsp;&nbsp;left: 0;</code>
+			<code>&nbsp;&nbsp;right: 0;</code>
+			<code>&nbsp;&nbsp;top: 0;</code>
+			<code>&nbsp;&nbsp;bottom: 0;</code>
+			<code>&nbsp;&nbsp;margin:auto;</code>
+		<code>}</code>
+		<code>@keyframes spin {</code>
+		    <code>&nbsp;&nbsp;0% { transform: rotate(0deg); }</code>
+		    <code>&nbsp;&nbsp;100% { transform: rotate(360deg); }</code>
+		<code>}</code>
+	</div>
+	<h4>4. adding jQuery to your webpage at the end of the before closing Body tag</h4>
+	<div class="code">
+		<code>&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"&gt;&lt;/script&gt;</code>
+	</div>
+	<h4>5. adding jQuery fade out the preloader animation once the page has been completely loaded.</h4>
+	<div class="code">
+		<code>&lt;script type="text/javascript"&gt;</code>
+		<code>&nbsp;&nbsp;$(window).load(function() {</code>
+		<code>&nbsp;&nbsp;&nbsp;&nbsp;$(".loading").fadeOut("slow");</code>
+		<code>&nbsp;&nbsp;});</code>
+		<code>&lt;/script&gt;</code>
+	</div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript">
+	$(window).load(function() {
+		$(".loading").fadeOut("slow");
+	});
+</script>
+</body>
+</html>
